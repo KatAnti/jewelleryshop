@@ -1,0 +1,47 @@
+@mixin cg-text {
+  font-family: "CG", "Times New Roman", serif;
+}
+
+@mixin poppins-text {
+  font-family: "Poppins", "Arial", sans-serif;
+}
+
+@mixin main-text {
+  @include poppins-text;
+  font-size: 16px;
+  line-height: 21px;
+  color: $main-text;
+}
+
+@mixin pseudo($top, $left, $width, $height) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin wrapper() {
+  max-width: 1260px;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
