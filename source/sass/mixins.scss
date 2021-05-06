@@ -45,3 +45,38 @@
     padding-right: 15px;
   }
 }
+
+@mixin medium-title {
+  @include cg-text;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.03em;
+}
+
+@mixin base-input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $light-text;
+}
+
+@mixin more-link {
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $main-theme-color;
+
+  &:hover {
+    color: $main-theme-color;
+  }
+
+  &:active {
+    padding-bottom: 5px;
+    border-bottom: 0;
+  }
+}

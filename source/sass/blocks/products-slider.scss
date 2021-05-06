@@ -1,0 +1,13 @@
+.products-slider {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.products-slider h2 {
+  @include medium-title;
+}
+
+.products-slider > a {
+  @include more-link;
+  margin-bottom: 40px;
+}

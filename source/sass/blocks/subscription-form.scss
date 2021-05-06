@@ -1,0 +1,71 @@
+.subscription-form {
+  flex-basis: 500px;
+  flex-shrink: 5;
+
+  @media (max-width: $tablet-width) {
+    flex-basis: 560px;
+    flex-shrink: 0;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-basis: 100%;
+    max-width: 560px;
+  }
+}
+
+.subscription-form p {
+  color: $light-text;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  @media (max-width: $mobile-width) {
+    max-width: 240px;
+    margin-top: 13px;
+  }
+}
+
+.subscription-form__title {
+  @include medium-title;
+  margin-left: -5px;
+
+  @media (max-width: $mobile-width) {
+    max-width: 240px;
+  }
+}
+
+.subscription-form__email-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $white;
+}
+
+.subscription-form__email-wrapper input:hover::placeholder {
+  color: $white;
+}
+
+.subscription-form__email-wrapper input {
+  @include base-input;
+}
+
+.subscription__submit {
+  padding-right: 0;
+  border: none;
+  background-color: transparent;
+  color: $white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.subscription__submit svg {
+  margin-left: 8px;
+  transition: 0.5s;
+}
+
+.subscription__submit:hover svg {
+  stroke: $light-text;
+  transform: scale(1.2);
+}
