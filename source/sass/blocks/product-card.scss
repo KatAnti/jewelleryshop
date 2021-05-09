@@ -1,0 +1,47 @@
+.product-card {
+  width: 32%;
+  transition: 0.5;
+
+  &--slider {
+    width: 23%;
+
+    @media (max-width: $tablet-width) {
+      width: 50%;
+    }
+  }
+}
+
+.product-card a {
+  &:hover {
+    color: $main-theme-color;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.product-card__preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-card__preview img {
+  width: 100%;
+}
+
+.product-card h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.product-card p {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
