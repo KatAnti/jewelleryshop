@@ -1,0 +1,25 @@
+.blog {
+  text-align: center;
+}
+
+h2 {
+  @include medium-title;
+  text-align: center;
+}
+
+.blog > a {
+  @include more-link;
+  margin-bottom: 70px;
+}
+
+.blog__container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 70px;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}

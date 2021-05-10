@@ -83,8 +83,8 @@
         <section class="products-slider">
           <h2>New In</h2>
           <a href="">Shop Now</a>
-          <button class="swiper-button-prev"></button>
-          <button class="swiper-button-next"></button>
+          <button class="swiper-button-prev">Previous slide</button>
+          <button class="swiper-button-next">Next slide</button>
           <div class="products-slider__container swiper-container">
             <div class="swiper-wrapper">
 
@@ -162,6 +162,63 @@
 
             </div>
             <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <section class="blog">
+          <h2>Blog</h2>
+          <a href="#">Read All</a>
+          <div class="blog__container">
+            <article class="blog-article blog-article--normal">
+              <div class="blog-article__img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/article-01-desktop@1x.webp 1x, img/article-01-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/article-01-tablet@1x.webp 1x, img/article-01-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/article-01-mobile@1x.webp 1x, img/article-01-mobile@2x.webp 2x">
+                  <!-- 1х: 285px; 2x: 570px -->
+                  <img src="img/article-01-desktop@1x.jpg" srcset="img/article-01-desktop@2x.jpg 2x" alt="How to care for your jewellery">
+                </picture>
+              </div>
+              <div class="blog-article__info">
+                <time datetime="2019-09-30">September 30, 2019</time>
+                <h3>How to care for your jewellery</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </article>
+
+            <article class="blog-article blog-article--big">
+              <div class="blog-article__img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/article-03-desktop@1x.webp 1x, img/article-03-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/article-03-tablet@1x.webp 1x, img/article-03-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/article-03-mobile@1x.webp 1x, img/article-03-mobile@2x.webp 2x">
+                  <!-- 1х: 285px; 2x: 570px -->
+                  <img src="img/article-03-desktop@1x.jpg" srcset="img/article-03-desktop@2x.jpg 2x" alt="AW 19 trends">
+                </picture>
+              </div>
+              <div class="blog-article__info">
+                <time datetime="2019-09-18">September 18, 2019</time>
+                <h3>AW 19 trends</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </article>
+
+            <article class="blog-article blog-article--normal blog-article--img-right">
+              <div class="blog-article__img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/article-02-desktop@1x.webp 1x, img/article-02-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/article-02-tablet@1x.webp 1x, img/article-02-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/article-02-mobile@1x.webp 1x, img/article-02-mobile@2x.webp 2x">
+                  <!-- 1х: 285px; 2x: 570px -->
+                  <img src="img/article-02-desktop@1x.jpg" srcset="img/article-02-desktop@2x.jpg 2x" alt="Power of crystals">
+                </picture>
+              </div>
+              <div class="blog-article__info">
+                <time datetime="2019-09-23">September 23, 2019</time>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </article>
+
           </div>
         </section>
       </div>

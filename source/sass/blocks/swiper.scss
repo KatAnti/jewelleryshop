@@ -70,6 +70,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 29px 11px;
+  text-indent: -99999px;
+  overflow: hidden;
   cursor: pointer;
 
   &:active {
