@@ -1,0 +1,50 @@
+.tab {
+  position: relative;
+  display: block;
+
+  &::after {
+    @include pseudo(calc(50% - 10px), auto, 10px, 10px);
+    right: 5.5%;
+    border-top: 1px solid $main-theme-color;
+    border-right: 1px solid $main-theme-color;
+    transform: rotate(135deg);
+  }
+
+  &--open {
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    &::after {
+      @include size(17px, 17px);
+      top: calc(50% - 14px);
+      right: 7.5%;
+    }
+
+    &--open {
+      &::after {
+        top: calc(50% - 4px);
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      @include size(13px, 13px);
+      top: calc(50% - 21px);
+      right: 9%;
+    }
+
+    &--open {
+      &::after {
+        top: calc(50% - 14px);
+      }
+    }
+  }
+}
+
+.tab__content--hide {
+  display: none;
+}
