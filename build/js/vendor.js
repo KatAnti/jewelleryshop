@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * Swiper 6.5.9
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -9,6 +11,7 @@
  *
  * Released on: April 30, 2021
  */
+
 
 'use strict';
 

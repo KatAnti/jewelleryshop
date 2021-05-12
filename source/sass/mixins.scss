@@ -89,3 +89,46 @@
     line-height: 21px;
   }
 }
+
+@mixin button-base {
+  display: block;
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@mixin button-main {
+  @include button-base;
+  background-color: $main-theme-color;
+  border: none;
+  color: $white;
+
+  &:hover {
+    background-color: darken($main-theme-color, 10%);
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background-color: lighten($main-theme-color, 5%);
+  }
+}
+
+@mixin button-additional {
+  @include button-base;
+  background-color: transparent;
+  border: 1px solid $main-theme-color;
+  color: $main-text;
+
+  &:hover {
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

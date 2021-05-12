@@ -40,7 +40,6 @@
 
 .subscription-form__email-wrapper {
   display: flex;
-  justify-content: space-between;
   border-bottom: 1px solid $white;
 }
 
@@ -50,9 +49,12 @@
 
 .subscription-form__email-wrapper input {
   @include base-input;
+  width: 100%;
 }
 
 .subscription__submit {
+  width: min-content;
+  min-width: 110px;
   padding-right: 0;
   border: none;
   background-color: transparent;

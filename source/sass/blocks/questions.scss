@@ -40,6 +40,14 @@
   font-size: 18px;
   line-height: 23px;
 
+  &:hover {
+    color: $main-theme-color;
+  }
+
+  &:active {
+    color: lighten($main-theme-color, 15%);
+  }
+
   @media (max-width: $tablet-width) {
     padding-left: 50px;
   }
