@@ -5,14 +5,29 @@
   text-align: center;
   font-weight: 500;
 
+  &--detail {
+    padding-top: 91px;
+    padding-bottom: 124px;
+  }
+
   @media (max-width: $tablet-width) {
     padding-top: 41px;
     padding-bottom: 37px;
+
+    &--detail {
+      padding-top: 41px;
+      padding-bottom: 72px;
+    }
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 31px;
     padding-bottom: 25px;
+
+    &--detail {
+      padding-top: 24px;
+      padding-bottom: 64px;
+    }
   }
 }
 
@@ -35,5 +50,18 @@
 
   @media (max-width: $mobile-width) {
     margin-bottom: 42px;
+  }
+}
+
+.products-slider--detail h2 {
+  margin-bottom: 21px;
+  letter-spacing: normal;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
   }
 }

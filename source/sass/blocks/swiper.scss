@@ -39,8 +39,29 @@
   }
 
   @media (max-width: $mobile-width) {
+    display: none;
     padding-top: 18px;
   }
+}
+
+.swiper-count-mobile {
+  display: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    padding-top: 18px;
+  }
+}
+
+.swiper-count-mobile__total {
+  padding-left: 3px;
+}
+
+.swiper-count-mobile__current {
+  padding-right: 3px;
 }
 
 .swiper-pagination-bullet {
