@@ -8,6 +8,7 @@
     border-top: 1px solid $main-theme-color;
     border-right: 1px solid $main-theme-color;
     transform: rotate(135deg);
+    cursor: pointer;
   }
 
   &--open {
@@ -45,6 +46,6 @@
   }
 }
 
-.tab__content--hide {
+.tab-content--hide {
   display: none;
 }

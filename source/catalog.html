@@ -86,8 +86,8 @@
           <form class="catalog__filter" action="https://echo.htmlacademy.ru" method="GET">
             <a class="catalog__filter-close" href="#">Close filter</a>
             <fieldset>
-              <a href="#" class="tab"><legend>Product</legend></a>
-              <div class="tab__content">
+              <legend class="tab tab--open"><a href="#">Product</a></legend>
+              <div class="tab-content tab-content--start-open">
                 <input class="visually-hidden" id="necklaces" type="checkbox" name="Necklaces">
                 <label for="necklaces">Necklaces</label>
                 <input class="visually-hidden" id="chokers" type="checkbox" name="Chokers">
@@ -100,8 +100,8 @@
             </fieldset>
 
             <fieldset>
-              <a href="#" class="tab"><legend>Material</legend></a>
-              <div class="tab__content">
+              <legend class="tab"><a href="#">Material</a></legend>
+              <div class="tab-content">
                 <input class="visually-hidden" id="gold" type="checkbox" name="Gold">
                 <label for="gold">Gold</label>
                 <input class="visually-hidden" id="silver" type="checkbox" name="Silver">
@@ -110,8 +110,8 @@
             </fieldset>
 
             <fieldset>
-              <a href="#" class="tab"><legend>Collection</legend></a>
-              <div class="tab__content">
+              <legend class="tab"><a href="#">Collection</a></legend>
+              <div class="tab-content">
                 <input class="visually-hidden" id="pink-flamingo" type="checkbox" name="Pink flamingo">
                 <label for="pink-flamingo">Pink flamingo</label>
                 <input class="visually-hidden" id="dreams" type="checkbox" name="Dreams">
@@ -120,8 +120,8 @@
             </fieldset>
 
             <fieldset>
-              <a href="#" class="tab"><legend>Price</legend></a>
-              <div class="tab__content">
+              <legend class="tab tab--open"><a href="#">Price</a></legend>
+              <div class="tab-content tab-content--start-open">
                 <div class="price-range">
                   <button class="price-range__control price-range__control--left"><span>$ 55</span></button>
                   <div class="price-range__choosen"></div>
@@ -327,7 +327,7 @@
           <div class="subscription-form__email-wrapper">
             <label for="subscription-email" class="visually-hidden">Enter your email</label>
             <input type="email" id="subscription-email" placeholder="Your E-mail" name="subscription-email" required>
-            <button class="subscription__submit" type="submit">
+            <button class="subscription-form__submit" type="submit">
               Sign Up
               <svg width="30" height="11" viewBox="0 0 30 11" stroke="white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10"/>
@@ -413,6 +413,21 @@
         </ul>
       </div>
     </footer>
+    <div class="body__overlay">
+      <div class="popup login-popup">
+        <button class="popup__close-button"></button>
+        <form class="login-popup__form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="login-popup__title">Log In</div>
+          <label for="login-email" class="visually-hidden">Enter Your E-mail</label>
+          <input type="email" name="login-email" placeholder="Your E-mail" id="login-email" required>
+          <label for="login-password" class="visually-hidden">Enter Your Password</label>
+          <input type="password" name="login-password" placeholder="Password" id="login-password" required>
+          <a class="login-popup__forgot-link" href="#">Forgot your password?</a>
+          <button class="login-popup__btn" type="submit">Log In</button>
+          <p>Don’t have an account? <a href="#">Sign up</a></p>
+        </form>
+      </div>
+    </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>

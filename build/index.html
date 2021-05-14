@@ -297,19 +297,19 @@
           <ul>
             <li>
               <a class="tab" href="">What materials are the jewellery made of?</a>
-              <p class="tab__content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+              <p class="tab-content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
             <li>
               <a class="tab" href="">Which countries do you deliver to?</a>
-              <p class="tab__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+              <p class="tab-content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
             <li>
               <a class="tab" href="">What are the payment methods?</a>
-              <p class="tab__content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+              <p class="tab-content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
             <li>
               <a class="tab" href="">Can I return the jewellery if it didn’t fit me?</a>
-              <p class="tab__content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+              <p class="tab-content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
           </ul>
         </section>
@@ -386,7 +386,7 @@
           <div class="subscription-form__email-wrapper">
             <label for="subscription-email" class="visually-hidden">Enter your email</label>
             <input type="email" id="subscription-email" placeholder="Your E-mail" name="subscription-email" required="">
-            <button class="subscription__submit" type="submit">
+            <button class="subscription-form__submit" type="submit">
               Sign Up
               <svg width="30" height="11" viewBox="0 0 30 11" stroke="white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10"></path>
@@ -472,6 +472,21 @@
         </ul>
       </div>
     </footer>
+    <div class="body__overlay">
+      <div class="popup login-popup">
+        <button class="popup__close-button"></button>
+        <form class="login-popup__form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="login-popup__title">Log In</div>
+          <label for="login-email" class="visually-hidden">Enter Your E-mail</label>
+          <input type="email" name="login-email" placeholder="Your E-mail" id="login-email" required="">
+          <label for="login-password" class="visually-hidden">Enter Your Password</label>
+          <input type="password" name="login-password" placeholder="Password" id="login-password" required="">
+          <a class="login-popup__forgot-link" href="#">Forgot your password?</a>
+          <button class="login-popup__btn" type="submit">Log In</button>
+          <p>Don’t have an account? <a href="#">Sign up</a></p>
+        </form>
+      </div>
+    </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>

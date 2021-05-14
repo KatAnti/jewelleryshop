@@ -60,12 +60,7 @@
 
 .catalog__filter a {
   display: block;
-
-  &::after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
+  padding: 23px 25px;
 }
 
 a.catalog__filter-close {
@@ -121,8 +116,9 @@ a.catalog__filter-close {
   }
 }
 
-.catalog__filter .tab__content {
+.catalog__filter .tab-content {
   position: relative;
+  margin-top: 64px;
   padding-left: 35px;
   padding-right: 10px;
   padding-bottom: 12px;
@@ -146,13 +142,20 @@ a.catalog__filter-close {
 }
 
 .catalog__filter legend {
+  position: relative;
   display: block;
-  float: left;
   width: 100%;
-  padding: 23px 25px;
+  height: 100%;
+  float: left;
 
   &:hover {
     color: $main-theme-color;
+  }
+
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
   }
 }
 

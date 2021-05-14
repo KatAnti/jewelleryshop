@@ -109,7 +109,7 @@
               <dt>Size</dt>
               <dd>18” / 20”</dd>
             </dl>
-            <a class="product-detail__cart-btn" href="#">Add to cart</a>
+            <a class="product-detail__cart-btn" href="cart-popup.html">Add to cart</a>
             <ul>
               <li>14 Day Returns</li>
               <li>2-Year Warranty</li>
@@ -298,7 +298,7 @@
           <div class="subscription-form__email-wrapper">
             <label for="subscription-email" class="visually-hidden">Enter your email</label>
             <input type="email" id="subscription-email" placeholder="Your E-mail" name="subscription-email" required="">
-            <button class="subscription__submit" type="submit">
+            <button class="subscription-form__submit" type="submit">
               Sign Up
               <svg width="30" height="11" viewBox="0 0 30 11" stroke="white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10"></path>
@@ -384,6 +384,49 @@
         </ul>
       </div>
     </footer>
+    <div class="body__overlay">
+      <div class="popup login-popup">
+        <button class="popup__close-button"></button>
+        <form class="login-popup__form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="login-popup__title">Log In</div>
+          <label for="login-email" class="visually-hidden">Enter Your E-mail</label>
+          <input type="email" name="login-email" placeholder="Your E-mail" id="login-email" required="">
+          <label for="login-password" class="visually-hidden">Enter Your Password</label>
+          <input type="password" name="login-password" placeholder="Password" id="login-password" required="">
+          <a class="login-popup__forgot-link" href="#">Forgot your password?</a>
+          <button class="login-popup__btn" type="submit">Log In</button>
+          <p>Don’t have an account? <a href="#">Sign up</a></p>
+        </form>
+      </div>
+      <div class="popup cart-popup">
+        <button class="popup__close-button"></button>
+        <div class="cart-popup__title">The item was added to your cart</div>
+        <div class="cart-popup__product-info">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/product-cart-desktop@1x.webp 1x, img/product-cart-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/product-cart-tablet@1x.webp 1x, img/product-cart-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/product-cart-mobile@1x.webp 1x, img/product-cart-mobile@2x.webp 2x">
+            <!-- 1х: 84px; 2x: 168px -->
+            <img src="img/product-cart-desktop@1x.jpg" srcset="img/product-cart-desktop@2x.jpg 2x" alt="Necklace with amethyst">
+          </picture>
+          <div class="cart-popup__product-details">
+            <span>Gold Necklace </span>
+            <p>$ 115</p>
+          </div>
+          <div class="cart-popup__amount-controls">
+            <button class="cart-popup__amount-btn cart-popup__amount-btn--plus">Add one</button>
+            <span>1</span>
+            <button class="cart-popup__amount-btn cart-popup__amount-btn--minus">Remove one</button>
+          </div>
+        </div>
+        <div class="cart-popup__totals">
+          <p>You have 1 item in the cart</p>
+          <p>Cart subtotal: $ 115</p>
+        </div>
+        <a class="cart-popup__btn cart-popup__btn--continue" href="catalog.html">Continue shopping</a>
+        <a class="cart-popup__btn cart-popup__btn--cart" href="#">Checkout</a>
+      </div>
+    </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>

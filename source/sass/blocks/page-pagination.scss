@@ -56,7 +56,9 @@
 .page-pagination__item a {
   display: block;
   color: $light-text;
+}
 
+.page-pagination__item a[href] {
   &:not(.page-pagination__item--active):hover {
     color: $main-theme-color;
   }

@@ -61,7 +61,116 @@
 'use strict';
 
 (function () {
+  var ESCAPE = 'Escape';
+
+  var pageBody = document.querySelector('.body');
+
+  var cartPopup = pageBody.querySelector('.cart-popup');
+  var addToCartBtn = pageBody.querySelector('.product-detail__cart-btn');
+
+  var loginPopup = pageBody.querySelector('.login-popup');
+  var loginBtn = pageBody.querySelector('.header__login-link');
+  var loginMobileBtn = pageBody.querySelector('.main-nav__login-link');
+
+  var overlay = pageBody.querySelector('.body__overlay');
+
+  var storageEmail = localStorage.getItem('email');
+
+  if (loginPopup) {
+    var emailInput = loginPopup.querySelector('#login-email');
+  }
+
+  if (cartPopup || loginPopup) {
+    var closeButtons = pageBody.querySelectorAll('.popup__close-button');
+  }
+
+  var onEscKeypress = function (evt) {
+    if (evt.key === ESCAPE) {
+      var currentPopup = pageBody.querySelector('.popup--show');
+      closePopup(currentPopup);
+    }
+  };
+
+  var closePopup = function (popup) {
+    popup.classList.remove('popup--show');
+    overlay.classList.remove('body__overlay--show');
+    pageBody.classList.remove('body--overflow');
+
+    document.removeEventListener('keydown', onEscKeypress);
+  };
+
+  var openPopup = function (popup) {
+    popup.classList.add('popup--show');
+    overlay.classList.add('body__overlay--show');
+    pageBody.classList.add('body--overflow');
+
+    document.addEventListener('keydown', onEscKeypress);
+  };
+
+  var setEmail = function () {
+    emailInput.focus();
+
+    if (storageEmail) {
+      emailInput.value = storageEmail;
+    }
+  };
+
+  if (closeButtons) {
+    closeButtons.forEach(function (closeButton) {
+      closeButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        var currentPopup = evt.target.closest('.popup');
+        closePopup(currentPopup);
+      });
+    });
+  }
+
+  if (cartPopup && overlay) {
+    addToCartBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      openPopup(cartPopup);
+    });
+
+
+    overlay.addEventListener('click', function (evt) {
+      if (evt.target === overlay) {
+        closePopup(cartPopup);
+      }
+    });
+  }
+
+  if (loginPopup && overlay) {
+    loginBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      openPopup(loginPopup);
+      setEmail();
+    });
+
+    loginMobileBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      openPopup(loginPopup);
+      setEmail();
+    });
+
+    overlay.addEventListener('click', function (evt) {
+      if (evt.target === overlay) {
+        closePopup(cartPopup);
+      }
+    });
+
+    loginPopup.addEventListener('submit', function () {
+      if (emailInput.value) {
+        localStorage.setItem('email', emailInput.value);
+      }
+    });
+  }
+})();
+
+'use strict';
+
+(function () {
   var mobileWidth = window.matchMedia('(max-width: 768px)');
+  var sliderContainer = document.querySelector('.swiper-container');
 
   var swiper = new window.Swiper('.swiper-container', {
     direction: 'horizontal',
@@ -105,15 +214,18 @@
   };
 
   swiper.init();
-  setSlidesCounter();
 
-  mobileWidth.addEventListener('change', function () {
+  if (sliderContainer) {
     setSlidesCounter();
-  });
 
-  swiper.on('slideChangeTransitionEnd', function () {
-    setSlidesCounter();
-  });
+    mobileWidth.addEventListener('change', function () {
+      setSlidesCounter();
+    });
+
+    swiper.on('slideChangeTransitionEnd', function () {
+      setSlidesCounter();
+    });
+  }
 
 })();
 
@@ -121,10 +233,12 @@
 
 (function () {
   var tabs = document.querySelectorAll('.tab');
-  var tabsContents = document.querySelectorAll('.tab__content');
+  var tabsContents = document.querySelectorAll('.tab-content');
 
   tabsContents.forEach(function (tab) {
-    tab.classList.add('tab__content--hide');
+    if (!tab.classList.contains('tab-content--start-open')) {
+      tab.classList.add('tab-content--hide');
+    }
   });
 
   if (tabs.length > 0) {
@@ -132,7 +246,7 @@
       tab.addEventListener('click', function (evt) {
         evt.preventDefault();
         tab.classList.toggle('tab--open');
-        tab.parentNode.querySelector('.tab__content').classList.toggle('tab__content--hide');
+        tab.parentNode.querySelector('.tab-content').classList.toggle('tab-content--hide');
       });
     });
   }

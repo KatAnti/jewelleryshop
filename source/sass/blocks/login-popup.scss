@@ -1,0 +1,135 @@
+.login-popup {
+  flex-direction: column;
+  width: 430px;
+  padding-top: 188px;
+  background-color: $light-background-color;
+  background-image: url("../img/login-banner-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 430px auto, cover;
+
+  @media (min-resolution: 2dppx) {
+    background-size: 860px auto, cover;
+    background-image: url("../img/login-banner-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 442px;
+    background-size: 442px auto, cover;
+    background-image: url("../img/login-banner-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-size: 884px auto, cover;
+      background-image: url("../img/login-banner-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: calc(100% - 50px);
+    margin-right: 25px;
+    margin-left: 25px;
+    padding-top: 121px;
+    background-image: url("../img/login-banner-mobile@1x.jpg");
+    background-size: 100% auto, cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/login-banner-mobile@2x.jpg");
+    }
+  }
+}
+
+.login-popup__form {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-background-color;
+  padding: 0 45px 40px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px 20px;
+  }
+}
+
+.login-popup__title {
+  @include cg-text;
+  margin-bottom: 21px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.login-popup__btn {
+  @include button-main;
+  margin-top: 40px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 29px;
+  }
+}
+
+.login-popup p {
+  color: $light-text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.login-popup a {
+  color: $main-text;
+
+  &:hover {
+    color: $main-theme-color;
+  }
+
+  &:active {
+    color: lighten($main-theme-color, 15%);
+  }
+}
+
+.login-popup input {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid $main-text;
+  background: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  &::placeholder {
+    @include poppins-text;
+    color: $light-text;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 23px;
+  }
+
+  &:hover {
+    &::placeholder {
+      color: $main-text;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &:not(:last-of-type) {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+a.login-popup__forgot-link {
+  margin: 5px 0;
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: $light-text;
+}

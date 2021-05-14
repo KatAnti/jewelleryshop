@@ -52,7 +52,7 @@
   width: 100%;
 }
 
-.subscription__submit {
+.subscription-form__submit {
   width: min-content;
   min-width: 110px;
   padding-right: 0;
@@ -65,12 +65,12 @@
   cursor: pointer;
 }
 
-.subscription__submit svg {
+.subscription-form__submit svg {
   margin-left: 8px;
   transition: 0.5s;
 }
 
-.subscription__submit:hover svg {
+.subscription-form__submit:hover svg {
   stroke: $light-text;
   transform: scale(1.2);
 }

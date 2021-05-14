@@ -2,6 +2,7 @@
 
 (function () {
   var mobileWidth = window.matchMedia('(max-width: 768px)');
+  var sliderContainer = document.querySelector('.swiper-container');
 
   var swiper = new window.Swiper('.swiper-container', {
     direction: 'horizontal',
@@ -45,14 +46,17 @@
   };
 
   swiper.init();
-  setSlidesCounter();
 
-  mobileWidth.addEventListener('change', function () {
+  if (sliderContainer) {
     setSlidesCounter();
-  });
 
-  swiper.on('slideChangeTransitionEnd', function () {
-    setSlidesCounter();
-  });
+    mobileWidth.addEventListener('change', function () {
+      setSlidesCounter();
+    });
+
+    swiper.on('slideChangeTransitionEnd', function () {
+      setSlidesCounter();
+    });
+  }
 
 })();
