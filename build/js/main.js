@@ -171,6 +171,7 @@
 (function () {
   var mobileWidth = window.matchMedia('(max-width: 768px)');
   var sliderContainer = document.querySelector('.swiper-container');
+  var mobileCounter = document.querySelector('.swiper-count-mobile');
 
   var swiper = new window.Swiper('.swiper-container', {
     direction: 'horizontal',
@@ -218,8 +219,18 @@
   if (sliderContainer) {
     setSlidesCounter();
 
+    if (mobileWidth.matches) {
+      mobileCounter.classList.add('swiper-count-mobile--show');
+    }
+
     mobileWidth.addEventListener('change', function () {
       setSlidesCounter();
+
+      if (!mobileWidth.matches) {
+        mobileCounter.classList.remove('swiper-count-mobile--show');
+      } else {
+        mobileCounter.classList.add('swiper-count-mobile--show');
+      }
     });
 
     swiper.on('slideChangeTransitionEnd', function () {

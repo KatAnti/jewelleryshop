@@ -92,6 +92,7 @@
 }
 
 @mixin button-base {
+  @include poppins-text;
   display: block;
   width: 100%;
   padding: 24px 15px;

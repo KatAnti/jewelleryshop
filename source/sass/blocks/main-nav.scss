@@ -15,12 +15,14 @@
 
     &--nojs {
       display: block;
+      padding-bottom: 70px;
     }
 
     &--open {
       display: block;
       height: calc(100vh - 180px);
       overflow-y: auto;
+      padding-bottom: 70px;
     }
   }
 
@@ -78,10 +80,6 @@
 .main-nav__login-link {
   font-size: 18px;
   line-height: 23px;
-
-  @media (max-width: $tablet-width) {
-    margin-bottom: 30px;
-  }
 }
 
 .main-nav__mobile-menu {

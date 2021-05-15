@@ -89,7 +89,7 @@
 }
 
 .banner--catalog h1 {
-  margin-bottom: 6px;
+  margin-top: -6px;
 
   @media (max-width: $tablet-width) {
     margin-top: -5px;
@@ -107,6 +107,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin-left: 0;
     font-size: 38px;
     line-height: 38px;
   }

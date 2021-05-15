@@ -51,8 +51,11 @@
   line-height: 130%;
 
   @media (max-width: $mobile-width) {
-    display: block;
     padding-top: 18px;
+
+    &--show {
+      display: block;
+    }
   }
 }
 
@@ -102,6 +105,7 @@
   text-indent: -99999px;
   overflow: hidden;
   cursor: pointer;
+  transition: 0.3s;
 
   &:active {
     opacity: 0.6;

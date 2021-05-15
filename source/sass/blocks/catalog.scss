@@ -72,6 +72,7 @@ a.catalog__filter-close {
     position: absolute;
     top: -10px;
     right: -10px;
+    padding: 0;
     background-color: $main-text;
     background-image: url("../img/icon-close.svg");
     background-repeat: no-repeat;
@@ -118,10 +119,10 @@ a.catalog__filter-close {
 
 .catalog__filter .tab-content {
   position: relative;
-  margin-top: 64px;
+  margin-top: 67px;
   padding-left: 35px;
   padding-right: 10px;
-  padding-bottom: 12px;
+  padding-bottom: 11px;
 }
 
 .catalog__filter .tab::before {
@@ -144,6 +145,7 @@ a.catalog__filter-close {
 .catalog__filter legend {
   position: relative;
   display: block;
+  padding: 0;
   width: 100%;
   height: 100%;
   float: left;
