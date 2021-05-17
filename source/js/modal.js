@@ -65,7 +65,7 @@
     });
   }
 
-  if (cartPopup && overlay) {
+  if (addToCartBtn && cartPopup && overlay) {
     addToCartBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
       openPopup(cartPopup);
@@ -79,7 +79,7 @@
     });
   }
 
-  if (loginPopup && overlay) {
+  if (loginBtn && loginPopup && overlay) {
     loginBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
       openPopup(loginPopup);

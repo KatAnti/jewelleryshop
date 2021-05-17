@@ -74,6 +74,7 @@
 
 @mixin more-link {
   display: inline-block;
+  vertical-align: top;
   font-weight: 500;
   border-bottom: 1px solid $main-theme-color;
 

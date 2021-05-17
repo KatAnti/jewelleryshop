@@ -37,12 +37,14 @@
   }
 }
 
-.questions a {
+.questions button {
   display: block;
+  width: 100%;
   padding: 45px 60px 42px 42px;
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
+  cursor: pointer;
 
   &:hover {
     color: $main-theme-color;
