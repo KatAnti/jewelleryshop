@@ -50,11 +50,11 @@
     toggleMobileMenu();
   });
 
-  mobileWidth.addEventListener('change', function () {
+  window.addEventListener('resize', function () {
     if (!mobileWidth.matches && menu.classList.contains('main-nav--open')) {
       toggleMobileMenu();
     }
-  });
+  }, false);
 
 })();
 
@@ -129,6 +129,7 @@
     addToCartBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
       openPopup(cartPopup);
+      cartPopup.focus();
     });
 
 
@@ -223,7 +224,7 @@
       mobileCounter.classList.add('swiper-count-mobile--show');
     }
 
-    mobileWidth.addEventListener('change', function () {
+    window.addEventListener('resize', function () {
       setSlidesCounter();
 
       if (!mobileWidth.matches) {
@@ -231,7 +232,7 @@
       } else {
         mobileCounter.classList.add('swiper-count-mobile--show');
       }
-    });
+    }, false);
 
     swiper.on('slideChangeTransitionEnd', function () {
       setSlidesCounter();

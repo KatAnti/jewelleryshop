@@ -26,10 +26,10 @@
     toggleMobileMenu();
   });
 
-  mobileWidth.addEventListener('change', function () {
+  window.addEventListener('resize', function () {
     if (!mobileWidth.matches && menu.classList.contains('main-nav--open')) {
       toggleMobileMenu();
     }
-  });
+  }, false);
 
 })();

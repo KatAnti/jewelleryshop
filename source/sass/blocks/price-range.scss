@@ -25,6 +25,7 @@
 .price-range__control {
   @include size(15px, 15px);
   position: absolute;
+  padding: 0;
   top: -6px;
   border-radius: 8px;
   border: none;

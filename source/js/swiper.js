@@ -55,7 +55,7 @@
       mobileCounter.classList.add('swiper-count-mobile--show');
     }
 
-    mobileWidth.addEventListener('change', function () {
+    window.addEventListener('resize', function () {
       setSlidesCounter();
 
       if (!mobileWidth.matches) {
@@ -63,7 +63,7 @@
       } else {
         mobileCounter.classList.add('swiper-count-mobile--show');
       }
-    });
+    }, false);
 
     swiper.on('slideChangeTransitionEnd', function () {
       setSlidesCounter();

@@ -69,6 +69,7 @@
     addToCartBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
       openPopup(cartPopup);
+      cartPopup.focus();
     });
 
 

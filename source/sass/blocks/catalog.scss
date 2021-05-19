@@ -175,6 +175,14 @@ a.catalog__filter-close {
   background-color: $main-theme-color;
 }
 
+.catalog__filter input:focus + label::before {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.catalog__filter input:focus + label {
+  color: $main-theme-color;
+}
+
 .catalog__filter button[type="submit"] {
   @include button-main;
   margin-bottom: 23px;

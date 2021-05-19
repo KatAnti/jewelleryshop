@@ -118,6 +118,7 @@
   padding: 0;
   background-color: transparent;
   transition: 0.3s;
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     fill: $white;
@@ -132,11 +133,13 @@
 .header__search input {
   @include size(100%, 40px);
   @include poppins-text;
+  display: block;
+  appearance: textfield;
   padding-left: 30px;
   border-radius: 21px;
   border: none;
   font-size: 14px;
-  color: $light-text;
+  color: $main-text;
 
   &::placeholder {
     color: $light-text;
@@ -152,6 +155,10 @@
     color: $white;
 
     &::placeholder {
+      color: transparent;
+    }
+
+    &:hover::placeholder {
       color: transparent;
     }
   }
